@@ -1,8 +1,9 @@
-import { signOut } from "@/auth";
+import { auth, signOut } from "@/auth";
 
-export default function SideNav() {
+export default async function SideNav() {
+	const session = await auth();
 	return (
-		<div className="flex flex-col h-full bg-gray-500">
+		<aside className="flex flex-col h-full bg-(--tertiary)">
 			<form
 				action={async () => {
 					"use server";
@@ -16,6 +17,6 @@ export default function SideNav() {
 			<button type="button" className="btn">
 				New Chat
 			</button>
-		</div>
+		</aside>
 	);
 }

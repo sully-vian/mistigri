@@ -5,7 +5,7 @@ export default async function Page() {
 	const session = await auth();
 
 	return session ? (
-		<div className="h-screen p-4">
+		<div className="h-full flex flex-col p-4 items-center">
 			<h1>New Chat</h1>
 			{session.user ? (
 				<>
@@ -17,7 +17,7 @@ export default async function Page() {
 			)}
 		</div>
 	) : (
-		<div className="h-screen p-4">
+		<div className="h-full p-4">
 			<h1>No active Session</h1>
 		</div>
 	);

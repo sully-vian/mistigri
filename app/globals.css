@@ -1,4 +1,15 @@
 @import "tailwindcss";
+@import "@sakun/system.css/style.css";
+/* import real file to get the variables */
+
+input[type="text"]:focus-visible,
+input[type="email"]:focus-visible,
+input[type="password"]:focus-visible,
+textarea:focus {
+	outline: none;
+	background: var(--primary);
+	color: var(--secondary);
+}
 
 /*
 :root {

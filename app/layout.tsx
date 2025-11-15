@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import SideNav from "@/app/ui/sidenav";
-import "@sakun/system.css";
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
@@ -18,11 +17,11 @@ export default function RootLayout({
 			<body>
 				<div className="flex flex-row h-screen">
 					<SideNav />
-					<div className="window">
+					<div className="flex w-full">
 						<div className="title-bar">
 							<h1 className="title">Mistigri</h1>
 						</div>
-						{children}
+						<div className="window-pane">{children}</div>
 					</div>
 				</div>
 			</body>
